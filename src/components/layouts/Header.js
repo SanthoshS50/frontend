@@ -10,7 +10,7 @@ import { TbTruckDelivery } from "react-icons/tb";
 
 export default function Header () {
     const { isAuthenticated, user } = useSelector(state => state.authState);
-    console.log(user);
+    // console.log(user);
     const { items:cartItems } = useSelector(state => state.cartState)
     const dispatch = useDispatch();
     const navigate = useNavigate();
