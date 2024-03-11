@@ -65,7 +65,7 @@ export default function Payment() {
         e.preventDefault();
         document.querySelector('#pay_btn').disabled = true;
         try {
-            const {data} = await axios.post('https://backend-2nri.onrender.com//api/v1/payment/process', paymentData,
+            const {data} = await axios.post('https://backend-2nri.onrender.com/api/v1/payment/process', paymentData,
             {
                 headers:{
                     authorization : localStorage.getItem('token')

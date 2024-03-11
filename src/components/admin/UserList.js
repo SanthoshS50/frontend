@@ -2,7 +2,7 @@
 import { Fragment, useEffect } from "react"
 import { Button } from "react-bootstrap"
 import { useDispatch, useSelector } from "react-redux"
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { deleteUser, getUsers } from "../../actions/userActions"
 import { clearError, clearUserDeleted } from "../../slices/userSlice"
 import Loader from '../layouts/Loader';
