@@ -7,6 +7,7 @@ import { logout } from '../../actions/userActions';
 import { FaCartShopping } from "react-icons/fa6";
 import { TbTruckDelivery } from "react-icons/tb";
 import avatars from '../../assets/default_avatar.png'
+import image from '../../assets/logo.png'
 
 
 export default function Header () {
@@ -25,7 +26,7 @@ export default function Header () {
         <div className="col-12 col-md-3 d-flex justify-content-center align-items-center">
           <div className="navbar-brand">
             <Link to="/">
-              <img width="270px" alt='Wonder Aqua Garden Logo' src="/images/logo.png" />
+              <img width="270px" alt='Wonder Aqua Garden Logo' src={image} />
             </Link>
             </div>
         </div>
