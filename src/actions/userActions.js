@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import {
     loginFail,
     loginRequest, 
@@ -46,7 +47,7 @@ export const login = (email, password) => async (dispatch) => {
 
         try {
             dispatch(loginRequest())
-            const { data }  = await axios.post(`/api/v1/login`,{email,password});
+            const { data }  = await axios.post(`https://backend-2nri.onrender.com/api/v1/login`,{email,password});
             console.log(data);
             dispatch(loginSuccess(data))
         } catch (error) {
@@ -69,7 +70,7 @@ export const register = (userData) => async (dispatch) => {
             }
         }
 
-        const { data }  = await axios.post(`/api/v1/register`,userData, config);
+        const { data }  = await axios.post(`https://backend-2nri.onrender.com/api/v1/register`,userData, config);
         dispatch(registerSuccess(data))
     } catch (error) {
         dispatch(registerFail(error.response.data.message))
@@ -77,13 +78,22 @@ export const register = (userData) => async (dispatch) => {
 
 }
 
+
+
+
 export const loadUser =  async (dispatch) => {
 
     try {
         dispatch(loadUserRequest())
        
 
-        const { data }  = await axios.get(`/api/v1/myprofile`);
+        const { data }  = await axios.get(`https://backend-2nri.onrender.com/api/v1/myprofile`,
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
+        );
         dispatch(loadUserSuccess(data))
     } catch (error) {
         dispatch(loadUserFail(error.response.data.message))
@@ -94,7 +104,8 @@ export const loadUser =  async (dispatch) => {
 export const logout =  async (dispatch) => {
 
     try {
-        await axios.get(`/api/v1/logout`);
+        await axios.get(`https://backend-2nri.onrender.com/api/v1/logout`);
+        localStorage.removeItem('token');
         dispatch(logoutSuccess())
     } catch (error) {
         dispatch(logoutFail)
@@ -108,11 +119,11 @@ export const updateProfile = (userData) => async (dispatch) => {
         dispatch(updateProfileRequest())
         const config = {
             headers: {
-                'Content-type': 'multipart/form-data'
+                authorization: localStorage.getItem('token')
             }
         }
 
-        const { data }  = await axios.put(`/api/v1/update`,userData, config);
+        const { data }  = await axios.put(`https://backend-2nri.onrender.com/api/v1/update`,userData, config);
         dispatch(updateProfileSuccess(data))
     } catch (error) {
         dispatch(updateProfileFail(error.response.data.message))
@@ -126,10 +137,10 @@ export const updatePassword = (formData) => async (dispatch) => {
         dispatch(updatePasswordRequest())
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                authorization : localStorage.getItem('token')
             }
         }
-        await axios.put(`/api/v1/password/change`, formData, config);
+        await axios.put(`https://backend-2nri.onrender.com/api/v1/password/change`, formData, config);
         dispatch(updatePasswordSuccess())
     } catch (error) {
         dispatch(updatePasswordFail(error.response.data.message))
@@ -143,10 +154,10 @@ export const forgotPassword = (formData) => async (dispatch) => {
         dispatch(forgotPasswordRequest())
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                authorization : localStorage.getItem('token')
             }
         }
-        const { data} =  await axios.post(`/api/v1/password/forgot`, formData, config);
+        const { data} =  await axios.post(`https://backend-2nri.onrender.com/api/v1/password/forgot`, formData, config);
         dispatch(forgotPasswordSuccess(data))
     } catch (error) {
         dispatch(forgotPasswordFail(error.response.data.message))
@@ -160,10 +171,10 @@ export const resetPassword = (formData, token) => async (dispatch) => {
         dispatch(resetPasswordRequest())
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                authorization : localStorage.getItem('token')
             }
         }
-        const { data} =  await axios.post(`/api/v1/password/reset/${token}`, formData, config);
+        const { data} =  await axios.post(`https://backend-2nri.onrender.com/api/v1/password/reset/${token}`, formData, config);
         dispatch(resetPasswordSuccess(data))
     } catch (error) {
         dispatch(resetPasswordFail(error.response.data.message))
@@ -175,7 +186,13 @@ export const getUsers =  async (dispatch) => {
 
     try {
         dispatch(usersRequest())
-        const { data }  = await axios.get(`/api/v1/admin/users`);
+        const { data }  = await axios.get(`https://backend-2nri.onrender.com/api/v1/admin/users`,
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
+        );
         dispatch(usersSuccess(data))
     } catch (error) {
         dispatch(usersFail(error.response.data.message))
@@ -187,7 +204,13 @@ export const getUser = id => async (dispatch) => {
 
     try {
         dispatch(userRequest())
-        const { data }  = await axios.get(`/api/v1/admin/user/${id}`);
+        const { data }  = await axios.get(`https://backend-2nri.onrender.com/api/v1/admin/user/${id}`,
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        }
+        );
         dispatch(userSuccess(data))
     } catch (error) {
         dispatch(userFail(error.response.data.message))
@@ -199,7 +222,12 @@ export const deleteUser = id => async (dispatch) => {
 
     try {
         dispatch(deleteUserRequest())
-        await axios.delete(`/api/v1/admin/user/${id}`);
+        await axios.delete(`https://backend-2nri.onrender.com/api/v1/admin/user/${id}`,
+        {
+            headers:{
+                authorization:localStorage.getItem('token')
+            }
+        });
         dispatch(deleteUserSuccess())
     } catch (error) {
         dispatch(deleteUserFail(error.response.data.message))
@@ -213,10 +241,10 @@ export const updateUser = (id, formData) => async (dispatch) => {
         dispatch(updateUserRequest())
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                authorization : localStorage.getItem('token')
             }
         }
-        await axios.put(`/api/v1/admin/user/${id}`, formData, config);
+        await axios.put(`https://backend-2nri.onrender.com/api/v1/admin/user/${id}`, formData, config);
         dispatch(updateUserSuccess())
     } catch (error) {
         dispatch(updateUserFail(error.response.data.message))

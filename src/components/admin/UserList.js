@@ -57,7 +57,7 @@ export default function UserList() {
                 role: user.role ,
                 actions: (
                     <Fragment>
-                        <Link to={`/admin/user/${user._id}`} className="btn btn-primary"> <i className="fa fa-pencil"></i></Link>
+                        {/* <Link to={`/admin/user/${user._id}`} className="btn btn-primary"> <i className="fa fa-pencil"></i></Link> */}
                         <Button onClick={e => deleteHandler(e, user._id)} className="btn btn-danger py-1 px-2 ml-2">
                             <i className="fa fa-trash"></i>
                         </Button>

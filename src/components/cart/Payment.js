@@ -59,13 +59,19 @@ export default function Payment() {
             return
         }
 
-    },[])
+    },[dispatch, navigate, orderError,shippingInfo])
 
     const submitHandler = async (e) => {
         e.preventDefault();
         document.querySelector('#pay_btn').disabled = true;
         try {
-            const {data} = await axios.post('/api/v1/payment/process', paymentData)
+            const {data} = await axios.post('https://backend-2nri.onrender.com//api/v1/payment/process', paymentData,
+            {
+                headers:{
+                    authorization : localStorage.getItem('token')
+                }
+            }
+            )
             const clientSecret = data.client_secret
             const result = await stripe.confirmCardPayment(clientSecret, {
                 payment_method: {

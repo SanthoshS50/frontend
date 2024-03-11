@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import Search from './Search';
+// import Search from './Search';
 import {useDispatch, useSelector} from 'react-redux';
-import {Dropdown, Image} from 'react-bootstrap';
+// import {Dropdown, Image} from 'react-bootstrap';
 import { logout } from '../../actions/userActions';
 import { FaCartShopping } from "react-icons/fa6";
 import { TbTruckDelivery } from "react-icons/tb";
+import avatars from '../../assets/default_avatar.png'
 
 
 export default function Header () {
@@ -39,7 +40,7 @@ export default function Header () {
               <Dropdown className='d-inline' >
                   <Dropdown.Toggle variant='default text-white pr-5' id='dropdown-basic'>
                     <figure className='avatar avatar-nav'>
-                     <Image width="50px" src={user.avatar ?? '/images/default_avatar.png'} />
+                     <Image width="50px" src={user.avatar ?? avatars} />
                     </figure>
                     <span>{user.name}</span>
                   </Dropdown.Toggle>

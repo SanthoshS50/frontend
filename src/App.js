@@ -47,7 +47,13 @@ function App() {
   useEffect(() => {
     store.dispatch(loadUser)
     async function getStripeApiKey(){
-      const {data} = await axios.get('/api/v1/stripeapi')
+      const {data} = await axios.get('https://backend-2nri.onrender.com/api/v1/stripeapi',
+      {
+        headers:{
+          authorization:localStorage.getItem('token')
+        }
+      }
+      )
       setStripeApiKey(data.stripeApiKey)
     }
       getStripeApiKey()
