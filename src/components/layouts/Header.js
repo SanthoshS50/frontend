@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-// import Search from './Search';
+import Search from './Search';
 import {useDispatch, useSelector} from 'react-redux';
-// import {Dropdown, Image} from 'react-bootstrap';
+import {Dropdown, Image} from 'react-bootstrap';
 import { logout } from '../../actions/userActions';
 import { FaCartShopping } from "react-icons/fa6";
 import { TbTruckDelivery } from "react-icons/tb";
