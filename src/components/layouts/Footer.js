@@ -44,13 +44,13 @@ export default function Footer() {
             <div className="col-md-4 mb-4 text-center">
               <h6 className="text-uppercase fw-bold mb-4" style={{ color: '#2F4F4F' }}>Quick Links</h6>
               <p>
-                <a href='http://localhost:3000/login' className='text-reset' style={{ textDecoration: 'none' }}>Login</a>
+                <a href='https://backend-2nri.onrender.com/login' className='text-reset' style={{ textDecoration: 'none' }}>Login</a>
               </p>
               <p>
-                <a href='http://localhost:3000/cart' className='text-reset' style={{ textDecoration: 'none' }}>Cart</a>
+                <a href='https://backend-2nri.onrender.com/cart' className='text-reset' style={{ textDecoration: 'none' }}>Cart</a>
               </p>
               <p>
-                <a href='http://localhost:3000/orders' className='text-reset' style={{ textDecoration: 'none' }}>Orders</a>
+                <a href='https://backend-2nri.onrender.com/orders' className='text-reset' style={{ textDecoration: 'none' }}>Orders</a>
               </p>
               <p>
                 <a href='https://stcourier.com/track/shipment' className='text-reset' style={{ textDecoration: 'none' }}>Track Your Order</a>
