@@ -110,7 +110,7 @@ export default function ProductList() {
                         bordered
                         striped
                         hover
-                        className="px-3"
+                        className="px-3 table-body"
                     />
                 }
             </Fragment>

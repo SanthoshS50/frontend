@@ -41,7 +41,7 @@ export default function Header () {
               <Dropdown className='d-inline' >
                   <Dropdown.Toggle variant='default text-white pr-5' id='dropdown-basic'>
                     <figure className='avatar avatar-nav'>
-                     <Image width="50px" src={user.avatar ?? avatars} />
+                     <Image width="50px" src={user.avatar ?? avatars} alt="user avatar" />
                     </figure>
                     <span>{user.name}</span>
                   </Dropdown.Toggle>
@@ -49,7 +49,7 @@ export default function Header () {
                       { user.role === 'admin' && <Dropdown.Item onClick={() => {navigate('admin/dashboard')}} className='text-dark'>Dashboard</Dropdown.Item> }
                       <Dropdown.Item onClick={() => {navigate('/myprofile')}} className='text-dark'>Profile</Dropdown.Item>
                       <Dropdown.Item onClick={() => {navigate('/orders')}} className='text-dark'>Orders</Dropdown.Item>
-                      <Dropdown.Item onClick={logoutHandler} className='text-danger'>Logout</Dropdown.Item>
+                      <Dropdown.Item onClick={()=>{logoutHandler();}} className='text-danger'>Logout</Dropdown.Item>
                   </Dropdown.Menu>
               </Dropdown>
             )

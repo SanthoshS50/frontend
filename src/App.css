@@ -664,4 +664,9 @@ ul.CTAs a {
   border-color: #ced4da;
 }
 
-
+.desktop-only{
+  display: none;
+}
+.table-body{
+  font-size:xx-small;
+}

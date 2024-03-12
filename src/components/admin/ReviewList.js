@@ -131,7 +131,7 @@ export default function ReviewList() {
                         bordered
                         striped
                         hover
-                        className="px-3"
+                        className="px-3 table-body"
                     />
                 }
             </Fragment>

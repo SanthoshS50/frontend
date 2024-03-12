@@ -69,7 +69,7 @@ export default function UserOrders () {
             <MetaData title="My Orders" />
             <h1 className='mt-5'>My Orders</h1> 
             <MDBDataTable
-                className='px-3'
+                className='px-3 table-body'
                 bordered
                 striped
                 hover
