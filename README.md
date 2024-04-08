@@ -9,16 +9,17 @@ Welcome to the Wonder Aqua Garden E-Commerce website! This project is built usin
 |--------------------------------------|------------------------------------|
 |![Admin Dashboard](<Readme_Images/Dashboard.png>)|![Home](<Readme_Images/Home.png>)|
 |![Admin New Product](<Readme_Images/Admin New Product.png>)|![Latest Products](<Readme_Images/Latest Products.png>)|
-|![Admin Product List](<Readme_Images/Admin Product List.png>)|![Order Details](<Readme_Images/Order Details.png>)|
-|![Admin Orders](<Readme_Images/Admin Orders.png>)|![User Cart Page](<Readme_Images/User Cart Page.png>)|
-|![Admin Review](<Readme_Images/Admin Reviews.png>)|![User Contact Us](<Readme_Images/User Contact Us.png>)|
-|![Admin User List](<Readme_Images/Admin User Panel.png>)|![User Profile](<Readme_Images/User Profile.png>)|
-||![User Product Details](<Readme_Images/User Product Details.png>)|
+|![Admin Product List](<Readme_Images/Admin Product List.png>)|![User Profile](<Readme_Images/User Profile.png>)|
+|![Admin Orders](<Readme_Images/Admin Orders.png>)|![User Contact Us](<Readme_Images/User Contact Us.png>)|
+|![Admin Review](<Readme_Images/Admin Reviews.png>)|![User Cart Page](<Readme_Images/User Cart Page.png>)|
+|![Admin User List](<Readme_Images/Admin User Panel.png>)|![User Product Details](<Readme_Images/User Product Details.png>)|
 ||![Shipping Info](<Readme_Images/Shipping Info.png>)|
 ||![Confirm Order](<Readme_Images/Confirm Order.png>)|
 ||![Card Info](<Readme_Images/Card Info.png>)|
 ||![Order Confirmed](<Readme_Images/Order Confirmed.png>)|
 ||![User Orders](<Readme_Images/User Orders.png>)|
+||![Order Details](<Readme_Images/Order Details.png>)|
+
 ## Features
 
 - **Product Categories**: Products are categorized into various sections including Aquarium Accessories, Aquarium Medicines, Aquascaping Tools, Fish Foods, Fish Tanks & Bowls, Live Fishes, Live Pets, Live Aqua Plants, Pet Foods, and Pet Needs.
