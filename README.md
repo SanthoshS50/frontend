@@ -5,6 +5,11 @@ Welcome to the Wonder Aqua Garden E-Commerce website! This project is built usin
 #### Web Link: https://frontend-omega-eight-94.vercel.app/
 
 
+| Admin                                | User                               |
+|--------------------------------------|------------------------------------|
+
+|                                      | ![Home](<Screenshot 2024-04-08 140417.png>) |
+
 ## Features
 
 - **Product Categories**: Products are categorized into various sections including Aquarium Accessories, Aquarium Medicines, Aquascaping Tools, Fish Foods, Fish Tanks & Bowls, Live Fishes, Live Pets, Live Aqua Plants, Pet Foods, and Pet Needs.
