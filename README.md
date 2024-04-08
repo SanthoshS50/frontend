@@ -8,7 +8,6 @@ Welcome to the Wonder Aqua Garden E-Commerce website! This project is built usin
 | Admin                                | User                               |
 |--------------------------------------|------------------------------------|
 |![Admin Dashboard](<Readme_Images/Dashboard.png>)|![Home](<Readme_Images/Home.png>)|
-|![Admin Main Dashboard](<Readme_Images/Admin Main Dashboard.png>)|![Latest Products](<Readme_Images/Latest Products.png>)|
 |![Admin New Product](<Readme_Images/Admin New Product.png>)|![Latest Products](<Readme_Images/Latest Products.png>)|
 |![Admin Product List](<Readme_Images/Admin Product List.png>)|![Order Details](<Readme_Images/Order Details.png>)|
 |![Admin Orders](<Readme_Images/Admin Orders.png>)|![User Cart Page](<Readme_Images/User Cart Page.png>)|
