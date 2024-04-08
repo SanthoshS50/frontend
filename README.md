@@ -8,7 +8,7 @@ Welcome to the Wonder Aqua Garden E-Commerce website! This project is built usin
 | Admin                                | User                               |
 |--------------------------------------|------------------------------------|
 
-|                                      |![Home](<Readme_Images/Screenshot 2024-04-08 140417.png>)|
+|![Admin Dashboard](<Readme_Images/Screenshot 2024-04-08 174944.png>)|![Home](<Readme_Images/Screenshot 2024-04-08 140417.png>)|
 
 ## Features
 
